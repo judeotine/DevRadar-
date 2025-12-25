@@ -4,7 +4,7 @@
 
 **A professional-grade GitHub activity dashboard for iOS and macOS**
 
-Track contributions, monitor pull requests and visualize your development activity with a native, polished interface.
+Track contributions, monitor pull requests and visualize your development activity.
 
 [![Swift](https://img.shields.io/badge/Swift-5.9-orange.svg)](https://swift.org)
 [![iOS](https://img.shields.io/badge/iOS-17.0+-blue.svg)](https://developer.apple.com/ios/)
@@ -389,35 +389,16 @@ All GitHub data is fetched using GraphQL for efficiency and type safety:
 
 ## Screenshots
 
-### Authentication Screen
-
-The app features a minimalist authentication screen with a black background showcasing the DevRadar branding and a modern "Get Started" modal with liquid glass effects.
-
-![Authentication Screen](screenshots/authentication.png)
-
-### Dashboard - Overview
-
-The main dashboard displays a personalized greeting, user profile with status, contribution heatmap showing yearly activity, and key metrics including activity level and current streak.
-
-![Dashboard Overview](screenshots/dashboard-overview.png)
-
-### Dashboard - Activity
-
-The activity tab provides detailed contribution statistics including current streak, total contributions, commits, pull requests, issues, and reviews in an organized card layout.
-
-![Dashboard Activity](screenshots/dashboard-activity.png)
-
-### Repository Detail
-
-Detailed repository view showing repository information, statistics (stars, forks, watchers, issues, PRs), language breakdown, and recent commit activity.
-
-![Repository Detail](screenshots/repository-detail.png)
-
-### Settings
-
-Comprehensive settings screen with appearance customization (System/Light/Dark themes), push notifications toggle, preferences for haptic feedback and auto-refresh, and account management options.
-
-![Settings](screenshots/settings.png)
+| Authentication | Dashboard - Overview |
+| :---: | :---: |
+| <img src="screenshots/authentication.png" alt="Authentication Screen" width="200"/> | <img src="screenshots/dashboard-overview.png" alt="Dashboard Overview" width="200"/> |
+| Minimalist authentication screen with DevRadar branding | Personalized greeting, profile, and contribution heatmap |
+| **Dashboard - Activity** | **Repository Detail** |
+| <img src="screenshots/dashboard-activity.png" alt="Dashboard Activity" width="200"/> | <img src="screenshots/repository-detail.png" alt="Repository Detail" width="200"/> |
+| Detailed contribution statistics and metrics | Repository info, stats, languages, and commit history |
+| **Settings** | |
+| <img src="screenshots/settings.png" alt="Settings" width="200"/> | |
+| Appearance, notifications, and account management | |
 
 ## Roadmap
 
@@ -446,14 +427,6 @@ Comprehensive settings screen with appearance customization (System/Light/Dark t
   - [ ] PR review reminders
   - [ ] Code review suggestions
 
-### Technical Improvements
-
-- [ ] Unit tests for ViewModels
-- [ ] Integration tests for API layer
-- [ ] UI snapshot tests
-- [ ] Performance profiling and optimization
-- [ ] Accessibility improvements
-- [ ] Localization support
 
 ## Contributing
 
