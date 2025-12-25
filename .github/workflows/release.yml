@@ -10,6 +10,8 @@ jobs:
   build-and-release:
     name: Build and Create Release
     runs-on: macos-latest
+    permissions:
+      contents: write
     
     steps:
       - name: Checkout
@@ -111,10 +113,8 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         run: |
           mkdir -p ./build/ipa
-          xcodebuild -exportArchive \
-            -archivePath "./build/DevRadar.xcarchive" \
-            -exportPath "./build/ipa" \
-            -exportOptionsPlist <(cat <<EOF
+          # Create export options plist file
+          cat > ./build/ExportOptions.plist << 'PLISTEOF'
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
           <plist version="1.0">
@@ -125,8 +125,12 @@ jobs:
             <string></string>
           </dict>
           </plist>
-          EOF
-          ) || echo "IPA export skipped (code signing required)"
+          PLISTEOF
+          # Try to export IPA (will fail without code signing, which is expected)
+          xcodebuild -exportArchive \
+            -archivePath "./build/DevRadar.xcarchive" \
+            -exportPath "./build/ipa" \
+            -exportOptionsPlist "./build/ExportOptions.plist" 2>&1 || echo "IPA export skipped (code signing required for IPA generation)"
       
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/')
