@@ -1,6 +1,6 @@
 # DevRadar
 
-A professional-grade GitHub activity dashboard for macOS and iOS. Track contributions, monitor pull requests, and visualize your development activity with a native, polished interface.
+A professional-grade GitHub activity dashboard for macOS and iOS. Track contributions, monitor pull requests and visualize your development activity with a native, polished interface.
 
 ## Features
 
