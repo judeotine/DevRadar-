@@ -90,7 +90,6 @@ final class GitHubRepository: GitHubRepositoryProtocol {
         var cursor: String? = nil
         var hasNextPage = true
 
-        // Fetch all pages of repositories
         while hasNextPage {
             let response: GraphQLResponse<RepositoriesResponse> = try await api.executeGraphQL(
                 query: GraphQLQueries.repositories,

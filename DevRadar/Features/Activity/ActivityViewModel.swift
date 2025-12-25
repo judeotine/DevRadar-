@@ -39,7 +39,6 @@ final class ActivityViewModel {
     }
     
     func refresh() async {
-        // Allow refresh from any state (including error)
         state = .loading
         
         do {

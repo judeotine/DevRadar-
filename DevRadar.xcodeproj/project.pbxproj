@@ -6,8 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		85CBB01E2EFCD395003F21C4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CBB01D2EFCD395003F21C4 /* WidgetKit.framework */; };
+		85CBB0202EFCD395003F21C4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CBB01F2EFCD395003F21C4 /* SwiftUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		85CBAF772EFC9A07003F21C4 /* DevRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CBB01B2EFCD395003F21C4 /* DevRadarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DevRadarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CBB01D2EFCD395003F21C4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		85CBB01F2EFCD395003F21C4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +40,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85CBB0182EFCD395003F21C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85CBB0202EFCD395003F21C4 /* SwiftUI.framework in Frameworks */,
+				85CBB01E2EFCD395003F21C4 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				85CBAF792EFC9A07003F21C4 /* DevRadar */,
+				85CBB01C2EFCD395003F21C4 /* Frameworks */,
 				85CBAF782EFC9A07003F21C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +65,18 @@
 			isa = PBXGroup;
 			children = (
 				85CBAF772EFC9A07003F21C4 /* DevRadar.app */,
+				85CBB01B2EFCD395003F21C4 /* DevRadarWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		85CBB01C2EFCD395003F21C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85CBB01D2EFCD395003F21C4 /* WidgetKit.framework */,
+				85CBB01F2EFCD395003F21C4 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +104,25 @@
 			productReference = 85CBAF772EFC9A07003F21C4 /* DevRadar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		85CBB01A2EFCD395003F21C4 /* DevRadarWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85CBB0332EFCD396003F21C4 /* Build configuration list for PBXNativeTarget "DevRadarWidgetExtension" */;
+			buildPhases = (
+				85CBB0172EFCD395003F21C4 /* Sources */,
+				85CBB0182EFCD395003F21C4 /* Frameworks */,
+				85CBB0192EFCD395003F21C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DevRadarWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = DevRadarWidgetExtension;
+			productReference = 85CBB01B2EFCD395003F21C4 /* DevRadarWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -81,6 +134,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					85CBAF762EFC9A07003F21C4 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					85CBB01A2EFCD395003F21C4 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -100,12 +156,20 @@
 			projectRoot = "";
 			targets = (
 				85CBAF762EFC9A07003F21C4 /* DevRadar */,
+				85CBB01A2EFCD395003F21C4 /* DevRadarWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		85CBAF752EFC9A07003F21C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85CBB0192EFCD395003F21C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +186,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85CBB0172EFCD395003F21C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		85CBAF822EFC9A08003F21C4 /* Debug */ = {
@@ -253,6 +327,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DevRadar;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +360,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DevRadar;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +377,62 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		85CBB0342EFCD396003F21C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DevRadarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devradar.DevRadar.DevRadarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85CBB0352EFCD396003F21C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DevRadarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devradar.DevRadar.DevRadarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,6 +457,15 @@
 			buildConfigurations = (
 				85CBAF852EFC9A08003F21C4 /* Debug */,
 				85CBAF862EFC9A08003F21C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85CBB0332EFCD396003F21C4 /* Build configuration list for PBXNativeTarget "DevRadarWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85CBB0342EFCD396003F21C4 /* Debug */,
+				85CBB0352EFCD396003F21C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,9 +9,9 @@ struct GradientBackground: View {
             if colorScheme == .dark {
                 LinearGradient(
                     colors: [
-                        Color(hex: "0D1117"), // GitHub dark background
-                        Color(hex: "161B22"), // Slightly lighter
-                        Color(hex: "1C2128")  // Even lighter
+                        Color(hex: "0D1117"), 
+                        Color(hex: "161B22"), 
+                        Color(hex: "1C2128")  
                     ],
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
